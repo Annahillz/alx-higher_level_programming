@@ -21,5 +21,6 @@ int check_cycle(listint_t *list)
 		trail = trail->next;
 		lead = lead->next->next;
 	}
+
 	return (0);
 }
