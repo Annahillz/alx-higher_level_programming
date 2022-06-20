@@ -6,7 +6,7 @@ def magic_calculation(a, b):
                 raise Exception('Too far')
             else:
                 varr += (a**b)/i
-        except:
+        except (TypeError):
             varr = (b + a)
             break
     return varr
