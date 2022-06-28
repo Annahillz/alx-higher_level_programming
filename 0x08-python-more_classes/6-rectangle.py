@@ -43,7 +43,7 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value        
+        self.__height = value
 
     def area(self):
         """returns the area of the rectangle"""
@@ -75,5 +75,5 @@ class Rectangle:
         decrements the number of instance of the rectangle"""
         if Rectangle.number_of_instances == 0:
             return
-        Rectangle.number_of_instances -=  1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
