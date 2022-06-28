@@ -1,1 +1,1 @@
-**Python** ***(- Everything Is Object)***
+**Python** ***(Everything Is Object)***
