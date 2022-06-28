@@ -16,7 +16,7 @@ class Rectangle:
         """
         self.height = height
         self.width = width
-        Rectangle.number_of_instances += 1
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
@@ -55,30 +55,6 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (2 * (self.__width + self.__height))
-
-    def __str__(self):
-        """Defines the string representation of a rectangle"""
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        rectang = []
-        for i in range(self.__height):
-            [rectang.append(str(self.print_symbol))
-                for j in range(self.__width)]
-            if i != self.__height - 1:
-                rectang.append("\n")
-        return "".join(rectang)
-
-    def __repr__(self):
-        """returns a string representation of the rectangle"""
-        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-
-    def __del__(self):
-        """prints a message when a rectangle object is deleted and
-        decrements the number of instance of the rectangle"""
-        if Rectangle.number_of_instances == 0:
-            return
-        Rectangle.number_of_instances -= 1
-        print("Bye rectangle...")
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
